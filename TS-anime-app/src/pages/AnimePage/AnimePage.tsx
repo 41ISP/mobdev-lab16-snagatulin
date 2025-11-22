@@ -30,34 +30,34 @@ function AnimePage() {
     setLoadCount(prev => prev + 1);
   };
 
-  return (
-    <div className="anime-page">
-      <h1>♥ Аниме Арты ♥</h1>
-      <section>
-        {images.length > 0 ? (
-          images.map((item) => (
-            <div
-              key={item.id}
-              className="cat-art"
-              onClick={() => navigate(`/art/${item.id}`)}
-              style={{ cursor: 'pointer' }}
-            >
-              <img
-                src={item.image.original.url}
-                alt={item.anime.title || "art"}
-                className="cat-image"
-              />
-            </div>
-          ))
-        ) : (
-          <p>Загрузка изображений...</p>
-        )}
-      </section>
-      <button onClick={handleShowMore} className="loadingmore">
-        Показать еще
-      </button>
-    </div>
-  );
+return (
+  <div className="anime-page">
+    <h1>♥ Аниме Арты ♥</h1>
+    <section>
+      {images.length > 0 ? (
+        images.map((item) => (
+          <div
+            key={item.id}
+            className="cat-art"
+            onClick={() => navigate(`/art/${item.id}`)}
+            style={{ cursor: 'pointer' }}
+          >
+            <img
+              src={item.image.original.url}
+              alt={item.anime.title || "art"}
+              className="cat-image"
+            />
+          </div>
+        ))
+      ) : (
+        <p>Загрузка изображений...</p>
+      )}
+    </section>
+    <button onClick={handleShowMore} className="loadingmore">
+      Показать еще
+    </button>
+  </div>
+);
 }
 
 export default AnimePage;
