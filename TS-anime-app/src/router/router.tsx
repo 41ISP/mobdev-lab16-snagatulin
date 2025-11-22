@@ -11,5 +11,4 @@ export const router = createBrowserRouter([
     path: "/art/:id",
     element: <OtherPage />,
   },
-]
-);
+] , { basename: "/mobdev-lab16-snagatulin" });

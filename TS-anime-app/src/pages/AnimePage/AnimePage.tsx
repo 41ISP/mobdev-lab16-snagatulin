@@ -30,6 +30,7 @@ function AnimePage() {
     setLoadCount(prev => prev + 1);
   };
 
+
 return (
   <div className="anime-page">
     <h1>♥ Аниме Арты ♥</h1>
